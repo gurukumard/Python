@@ -1,0 +1,34 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "name": "inputblob",
+      "type": "blob",
+      "path": "samples-workitems/InsertRecords.csv",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in"
+    },
+    {
+      "name": "outputblob",
+      "type": "blob",
+      "path": "samples-workitems/InsertRecords.xml",
+      "connection": "AzureWebJobsStorage",
+      "direction": "out"
+    }
+  ]
+}
