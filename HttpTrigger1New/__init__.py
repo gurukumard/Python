@@ -2,14 +2,14 @@ import logging
 import azure.functions as func
 import xml.etree.ElementTree as ET
 import glob as g
-
+#Added this file in Git
 def main(req: func.HttpRequest ,inputblob: func.InputStream, outputblob: func.Out[func.InputStream]) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     root = ET.Element('catalog') # root tag name
     root.text = '\n'    # newline before the book element
 
-    #path = "C:/Users/124507/Documents/azLocalCode/InsertRecords.csv"
+    
     test = inputblob.readlines()
     #for filename in g.glob(path):
     #    with open(filename) as f:
